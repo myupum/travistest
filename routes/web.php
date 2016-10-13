@@ -17,6 +17,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/article',  'ArticleController@index');
+
+Route::get('/article/create',  'ArticleController@create');
+
+Route::post('/article/store',  'ArticleController@store');
+
+Route::get('/article/complete',  'ArticleController@complete');
+
+Route::get('/article/edit/{id}',  'ArticleController@edit');
+
 //Route::get('/hello', function () {
 //    return view('hello.index');
 //});
