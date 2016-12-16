@@ -1,0 +1,16 @@
+nguage: php
+php:
+  - 5.6
+  - hhvm
+
+before_script:
+  - composer self-update
+  - composer install
+  - chmod -R 777 app/storage
+
+script:
+  - phpunit
+
+notifications:
+  emails:
+    - myu1107@gmail.com
