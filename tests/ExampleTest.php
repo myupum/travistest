@@ -14,6 +14,10 @@ class ExampleTest extends TestCase
     public function testBasicExample()
     {
         $this->visit('/')
-             ->see('Laravel');
+                ->click('Article')
+                ->seePageIs('/article')
+                ->dontsee('Error')
+                ->dontsee('Fatal')
+                ->dontsee('Warning');
     }
 }

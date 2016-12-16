@@ -30,3 +30,9 @@ Route::get('/article/edit/{id}',  'ArticleController@edit');
 //Route::get('/hello', function () {
 //    return view('hello.index');
 //});
+
+Route::get('/users',  'UsersController@index');
+Route::get('/users/show',  'UsersController@show');
+Route::post('/users/store',  'UsersController@store');
+Route::put('/users/update',  'UsersController@update');
+Route::delete('/users/destroy',  'UsersController@destroy');
