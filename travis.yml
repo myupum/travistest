@@ -1,16 +1,14 @@
-nguage: php
+language: php
+
 php:
   - 5.6
-  - hhvm
 
 before_script:
+  - cp .env.travis .env
+  - mysql -e 'create database homestead_test;'
   - composer self-update
-  - composer install
-  - chmod -R 777 app/storage
+  - composer install --no-interaction
 
 script:
-  - phpunit
+  - vendor/bin/phpunit
 
-notifications:
-  emails:
-    - myu1107@gmail.com
